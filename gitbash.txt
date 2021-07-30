@@ -1,0 +1,103 @@
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir try2
+3) Зайти в папку - cd try2
+4) Создать 3 папки - mkdir A1 B2 C3
+5) Зайти в любоую папку - cd A1
+6) Создать 5 файлов (3 txt, 2 json) -  touch A1.txt A2.txt A3.txt A4.json A5.json
+7) Создать 3 папки - mkdir case6 case7 case8
+8. Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - vim A1.txt
+10) + написать туда что-нибудь, любой текст. - 
+i
+cover1
+cover2
+cover3
+cover4
+cover5
+cover6
+cover7
+cover8
+cover9
+cover10
+coverABC
+coverabc
+COVERABC
+11) + сохранить и выйти. - сохранить как - esc :wq
+12) Выйти из папки на уровень выше - cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - 
+cd A1
+mv A2.txt case6 A3.txt case6
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp A4.json case7 A5.json case7
+15) Найти файл по имени -  find . -name "A1.txt"
+./A1/A1.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+cat A1.txt  
+grep cover A1.txt (из текущей папки)
+cover1
+cover2
+cover3
+cover4
+cover5
+cover6
+cover7
+cover8
+cover9
+cover10
+coverABC
+coverabc
+ grep -R cover . (из корневой папки)
+
+ grep -i  -R cover . (-i не смотрит на регистр)
+./A1/A1.txt:cover1
+./A1/A1.txt:cover2
+./A1/A1.txt:cover3
+./A1/A1.txt:cover4
+./A1/A1.txt:cover5
+./A1/A1.txt:cover6
+./A1/A1.txt:cover7
+./A1/A1.txt:cover8
+./A1/A1.txt:cover9
+./A1/A1.txt:cover10
+./A1/A1.txt:coverABC
+./A1/A1.txt:coverabc
+./A1/A1.txt:COVERABC
+
+17) вывести несколько первых строк из текстового файла -  head -3 A1.txt (первые 3 строки)
+18) вывести несколько последних строк из текстового файла - tail -3 A1.txt (последние 3 строки)
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. - less A1.txt
+20) вывести дату и время
+ date #
+Wed Jul 28 16:04:52 RTZ 2021
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+
+https://api.quarantine.country/api/v1/regions
+$ curl https://api.quarantine.country/api/v1/regions
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0{"status":200,"type":"stack","data":[{"key":"taiwan","name":"Taiwan","iso3166a2":"TW","iso3166a3":"TWN","iso3166numeric":158},{"key":"new_caledonia","name":"New Caledonia","iso3166a2":"NC","iso3166a3":"NCL","iso3166numeric":540},{"key":"saudi_arabia","name":"Saudi Arabia","iso3166a2":"SA","iso3166a3":"SAU","iso3166numeri
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+
+cd try2
+mkdir A1 B2 C3
+cd A1
+touch A1.txt A2.txt A3.txt A4.json A5.json
+mkdir case6 case7 case8
+ls -la
+cd A1
+mv A2.txt case6 A3.txt case6
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+
+https://losst.ru/nachnite-izuchat-linux-pryamo-sejchas
