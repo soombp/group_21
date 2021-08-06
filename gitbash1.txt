@@ -96,6 +96,6 @@ mv A2.txt case6 A3.txt case6
 =====================
 1) Посмотреть где я - pwd
 2) Создать папку - mkdir foldername
-3) Зайти в папку - cd foldername
+3) Зайти в папку - cd folder
 
 https://losst.ru/nachnite-izuchat-linux-pryamo-sejchas
